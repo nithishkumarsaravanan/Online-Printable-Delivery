@@ -100,33 +100,49 @@
             $stmt->bind_param("i", $res_id);
             $stmt->execute();
             $result = $stmt->get_result();
-
-            if ($result && $result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                $imgPath = "admin/Res_img/prints/" . htmlspecialchars($row['img']);
-                $title = htmlspecialchars($row['title']);
-                $slogan = htmlspecialchars($row['slogan']);
-                $price = htmlspecialchars($row['price']);
-                echo '<div class="product-card">';
-                echo '<div class="product-image" style="background-image: url(\'' . $imgPath . '\');"></div>';
-                echo '<div class="product-details">';
-                echo '<h4>' . $title . '</h4>';
-                echo '<p>' . $slogan . '</p>';
-                echo '<p><strong>Price: ₹' . $price . '</strong></p>';
-                echo '<label for="quantity">Quantity:</label> ';
-                echo '<input type="number" id="quantity" name="quantity" class="form-control quantity-input" value="1" min="1" />';
-                echo '</div>';
-                echo '</div>';
-            } else {
-                echo '<p>Product not found.</p>';
-            }
-            $stmt->close();
+        } elseif (isset($_GET['upload']) && $_GET['upload'] === 'success') {
+            // Fetch latest product if upload success and no res_id
+            $result = $db->query("SELECT * FROM print_photo ORDER BY d_id DESC LIMIT 1");
         } else {
-            echo '<p>No product specified.</p>';
+            $result = false;
+        }
+
+        if ($result && $result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $imgPath = "admin/Res_img/prints/" . htmlspecialchars($row['img']);
+            $title = htmlspecialchars($row['title']);
+            $slogan = htmlspecialchars($row['slogan']);
+            $price = htmlspecialchars($row['price']);
+            echo '<div class="product-card">';
+            echo '<div class="product-image" style="background-image: url(\'' . $imgPath . '\');"></div>';
+            echo '<div class="product-details">';
+            echo '<h4>' . $title . '</h4>';
+            echo '<p>' . $slogan . '</p>';
+            echo '<p><strong>Price: ₹' . $price . '</strong></p>';
+            echo '<label for="quantity">Quantity:</label> ';
+            echo '<input type="number" id="quantity" name="quantity" class="form-control quantity-input" value="1" min="1" />';
+            echo '</div>';
+            echo '</div>';
+        } else {
+            if (isset($_GET['upload']) && $_GET['upload'] === 'success') {
+                // If upload success but no product found
+                echo '<p>Upload successful. No product details available.</p>';
+            } elseif ($res_id > 0) {
+                echo '<p>Product not found.</p>';
+            } else {
+                echo '<p>No product specified.</p>';
+            }
         }
         ?>
 
+        <?php if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
+            <script>
+                alert('Uploaded successfully');
+            </script>
+        <?php endif; ?>
+
         <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="res_id" value="<?php echo htmlspecialchars($res_id); ?>" />
             <div class="form-group">
                 <label for="fileInput">Choose file to upload (PDF, images, etc.)</label>
                 <div class="custom-file">

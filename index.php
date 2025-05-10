@@ -211,74 +211,8 @@ session_start();
             </div>
         </div>
     </section>
-    <section class="featured-restaurants">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="title-block pull-left">
-                        <h4>Featured Restaurants</h4>
-                    </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="restaurants-filter pull-right">
-                        <nav class="primary pull-left">
-                            <ul>
-                                <li><a href="#" class="selected" data-filter="*">all</a> </li>
-                                <?php
-                                $res = mysqli_query($db, "select * from res_category");
-                                while ($row = mysqli_fetch_array($res)) {
-                                    echo '<li><a href="#" data-filter=".' . $row['c_name'] . '"> ' . $row['c_name'] . '</a> </li>';
-                                }
-                                ?>
-
-                            </ul>
-                        </nav>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="restaurant-listing">
 
 
-                    <?php
-                    $ress = mysqli_query($db, "select * from restaurant");
-                    while ($rows = mysqli_fetch_array($ress)) {
-
-                        $query = mysqli_query($db, "select * from res_category where c_id='" . $rows['c_id'] . "' ");
-                        $rowss = mysqli_fetch_array($query);
-
-                        echo ' <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant all ' . $rowss['c_name'] . '">
-														<div class="restaurant-wrap">
-															<div class="row">
-																<div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-																	<a class="restaurant-logo" href="dishes.php?res_id=' . $rows['rs_id'] . '" > <img src="admin/Res_img/' . $rows['image'] . '" alt="Restaurant logo"> </a>
-																</div>
-													
-																<div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-																	<h5><a href="dishes.php?res_id=' . $rows['rs_id'] . '" >' . $rows['title'] . '</a></h5> <span>' . $rows['address'] . '</span>
-																</div>
-													
-															</div>
-												
-														</div>
-												
-													</div>';
-                    }
-
-
-                    ?>
-
-
-
-
-                </div>
-            </div>
-
-
-        </div>
-    </section>
 
 
     <footer class="footer">
@@ -309,12 +243,12 @@ session_start();
                     </div>
                     <div class="col-xs-12 col-sm-4 address color-gray">
                         <h5>Address</h5>
-                        <p>1086 Stockert Hollow Road, Seattle</p>
+                        <p>MKCE,KARUR</p>
                         <h5>Phone: 75696969855</a></h5>
                     </div>
                     <div class="col-xs-12 col-sm-5 additional-info color-gray">
                         <h5>Addition informations</h5>
-                        <p>Join thousands of other restaurants who benefit from having partnered with us.</p>
+                        <p>Join thousands of other photoshop who benefit from having partnered with us.</p>
                     </div>
                 </div>
             </div>
