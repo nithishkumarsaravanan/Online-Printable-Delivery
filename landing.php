@@ -113,14 +113,22 @@
             $title = htmlspecialchars($row['title']);
             $slogan = htmlspecialchars($row['slogan']);
             $price = htmlspecialchars($row['price']);
-            echo '<div class="product-card">';
+            echo '<div class="product-card" style="justify-content: space-between; align-items: center;">';
             echo '<div class="product-image" style="background-image: url(\'' . $imgPath . '\');"></div>';
-            echo '<div class="product-details">';
+            echo '<div class="product-details" style="flex-grow: 1; margin-right: 20px;">';
             echo '<h4>' . $title . '</h4>';
             echo '<p>' . $slogan . '</p>';
             echo '<p><strong>Price: ₹' . $price . '</strong></p>';
             echo '<label for="quantity">Quantity:</label> ';
             echo '<input type="number" id="quantity" name="quantity" class="form-control quantity-input" value="1" min="1" />';
+            // Removed subtotal and total display as per user request
+            echo '</div>';
+            echo '<div style="flex-shrink: 0;">';
+            echo '<form action="checkout.php" method="get" style="margin: 0;">';
+            echo '<input type="hidden" name="res_id" value="' . $res_id . '" />';
+            echo '<input type="hidden" id="form_quantity" name="quantity" value="1" />';
+            echo '<button type="submit" style="background-color:#5c4ac7; color:white; border:none; padding:12px 25px; border-radius:8px; font-size:16px; cursor:pointer;">Buy Now</button>';
+            echo '</form>';
             echo '</div>';
             echo '</div>';
         } else {
