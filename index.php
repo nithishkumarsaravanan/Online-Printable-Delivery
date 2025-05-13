@@ -82,6 +82,8 @@ session_start();
                 </div>
             </div>
         </nav>
+        ]
+
 
     </header>
 
@@ -157,88 +159,88 @@ session_start();
         </div>
     </section>
 
-   <section class="how-it-works">
-    <div class="container">
-        <div class="text-xs-center">
-            <h2>Easy to Print Online</h2>
-            <div class="row how-it-works-solution">
+    <section class="how-it-works">
+        <div class="container">
+            <div class="text-xs-center">
+                <h2>Easy to Print Online</h2>
+                <div class="row how-it-works-solution">
 
-                <!-- Step 1 -->
-                <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col1">
-                    <div class="how-it-works-wrap">
-                        <div class="step step-1">
-                            <div class="icon" data-step="1">
-                                <!-- Suggested Icon: Computer with Document -->
-                                <i class="fa fa-desktop" style="font-size: 48px; color: white;"></i>
+                    <!-- Step 1 -->
+                    <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col1">
+                        <div class="how-it-works-wrap">
+                            <div class="step step-1">
+                                <div class="icon" data-step="1">
+                                    <!-- Suggested Icon: Computer with Document -->
+                                    <i class="fa fa-desktop" style="font-size: 48px; color: white;"></i>
+                                </div>
+                                <h3>Select a Print Service</h3>
+                                <p>Choose from various online printing options like flyers, posters, business cards, and more.</p>
                             </div>
-                            <h3>Select a Print Service</h3>
-                            <p>Choose from various online printing options like flyers, posters, business cards, and more.</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Step 2 -->
-                <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col2">
-                    <div class="step step-2">
-                        <div class="icon" data-step="2">
-                            <!-- Suggested Icon: Upload or File Icon -->
-                            <i class="fa fa-upload" style="font-size: 48px; color: white;"></i>
+                    <!-- Step 2 -->
+                    <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col2">
+                        <div class="step step-2">
+                            <div class="icon" data-step="2">
+                                <!-- Suggested Icon: Upload or File Icon -->
+                                <i class="fa fa-upload" style="font-size: 48px; color: white;"></i>
+                            </div>
+                            <h3>Upload Your Design</h3>
+                            <p>Upload ready-to-print files or use our editor to create your print-ready design.</p>
                         </div>
-                        <h3>Upload Your Design</h3>
-                        <p>Upload ready-to-print files or use our editor to create your print-ready design.</p>
                     </div>
-                </div>
 
-                <!-- Step 3 -->
-                <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col3">
-                    <div class="step step-3">
-                        <div class="icon" data-step="3">
-                            <!-- Suggested Icon: Printer or Truck -->
-                            <i class="fa fa-print" style="font-size: 48px; color: white;"></i>
+                    <!-- Step 3 -->
+                    <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col3">
+                        <div class="step step-3">
+                            <div class="icon" data-step="3">
+                                <!-- Suggested Icon: Printer or Truck -->
+                                <i class="fa fa-print" style="font-size: 48px; color: white;"></i>
+                            </div>
+                            <h3>Print & Deliver</h3>
+                            <p>We print your files and deliver them to your doorstep quickly and reliably.</p>
                         </div>
-                        <h3>Print & Deliver</h3>
-                        <p>We print your files and deliver them to your doorstep quickly and reliably.</p>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <p class="pay-info">Pay Online or Cash on Delivery</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-   <footer class="footer">
-    <div class="container">
-        <div class="bottom-footer">
             <div class="row">
-                <div class="col-xs-12 col-sm-3 payment-options color-gray">
-                    <h5>Payment Options</h5>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="https://framerusercontent.com/images/apE2tIqb1SpkFBcRkZky8sCio.gif" alt="Razorpay" width="100">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-4 address color-gray">
-                    <h5>Address</h5>
-                    <p>MKCE, KARUR</p>
-                    <h5>Phone: 75696969855</h5>
-                </div>
-                <div class="col-xs-12 col-sm-5 additional-info color-gray">
-                    <h5>Additional Information</h5>
-                    <p>Join thousands of other photoshop who benefit from having partnered with us.</p>
+                <div class="col-sm-12 text-center">
+                    <p class="pay-info">Pay Online or Cash on Delivery</p>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="bottom-footer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 payment-options color-gray">
+                        <h5>Payment Options</h5>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="https://framerusercontent.com/images/apE2tIqb1SpkFBcRkZky8sCio.gif" alt="Razorpay" width="100">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 address color-gray">
+                        <h5>Address</h5>
+                        <p>MKCE, KARUR</p>
+                        <h5>Phone: 75696969855</h5>
+                    </div>
+                    <div class="col-xs-12 col-sm-5 additional-info color-gray">
+                        <h5>Additional Information</h5>
+                        <p>Join thousands of other photoshop who benefit from having partnered with us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
